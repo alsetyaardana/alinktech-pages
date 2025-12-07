@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alink Technology - Autonomous Workflow Consulting</title>
+    
+    <link rel="icon" type="image/png" href="images/alinktech-favicon.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        alink: {
+                            bg: '#FFFFFF',
+                            light: '#F6F7FB',
+                            accent: '#5271FF', // Warna Biru Utama
+                            dark: '#111111',
+                            text: '#222222'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        
+        /* Animasi Scroll Reveal Website */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* =========================================
+           CUSTOM N8N CHAT STYLE (REFERENSI KAMU)
+           ========================================= */
+        :root {
+            /* Warna Dasar Brand Alink */
+            --chat--color-primary: #5271FF;
+            --chat--color-primary-shade-50: #405ef7; /* Hover */
+            --chat--color-primary-shade-100: #2940cc; /* Active */
+            
+            /* Warna Sekunder (Dipakai untuk Bubble User di beberapa versi) */
+            --chat--color-secondary: #5271FF; 
+            --chat--color-secondary-shade-50: #405ef7;
+
+            /* Warna Netral */
+            --chat--color-white: #ffffff;
+            --chat--color-light: #f2f4f8;
+            --chat--color-dark: #111111;
+            --chat--color-disabled: #777980;
+            --chat--color-typing: #404040;
+
+            /* Konfigurasi Ukuran & Spacing */
+            --chat--spacing: 1rem;
+            --chat--border-radius: 12px; /* Lebih rounded biar modern */
+            --chat--transition-duration: 0.15s;
+            --chat--window--width: 380px;
+            --chat--window--height: 600px;
+
+            /* HEADER (Biru Alink) */
+            --chat--header--background: var(--chat--color-primary);
+            --chat--header--color: var(--chat--color-white);
+            --chat--heading--font-size: 1.2em; /* Adjusted size */
+            
+            /* MESSAGE BUBBLES */
+            /* Bot: Abu-abu Terang, Teks Hitam */
+            --chat--message--bot--background: #F3F4F6;
+            --chat--message--bot--color: #111111;
+            --chat--message--bot--border: none;
+            
+            /* User: Biru Alink, Teks Putih */
+            --chat--message--user--background: var(--chat--color-primary);
+            --chat--message--user--color: var(--chat--color-white);
+            --chat--message--user--border: none;
+            
+            /* INPUT AREA */
+            --chat--textarea--height: 50px;
+            
+            /* TOMBOL LAUNCHER (Biru Alink) */
+            --chat--toggle--background: var(--chat--color-primary);
+            --chat--toggle--hover--background: var(--chat--color-primary-shade-50);
+            --chat--toggle--active--background: var(--chat--color-primary-shade-100);
+            --chat--toggle--color: var(--chat--color-white);
+            --chat--toggle--size: 60px;
+        }
+    </style>
+</head>
+<body class="bg-white text-alink-text antialiased">
+
+    <nav id="navbar" class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            
+            <a href="#" class="flex items-center group">
+                <img src="images/alinktech-favicon.png" alt="Alink Technology Logo" class="h-10 w-auto mr-2 group-hover:scale-105 transition-transform">
+                <span class="font-bold text-alink-dark text-xl tracking-tight">Alink <span class="text-xs font-semibold uppercase text-gray-400 tracking-widest ml-1">TECHNOLOGY</span></span>
+            </a>
+            
+            <div class="hidden lg:flex space-x-8 items-center">
+                <a href="#" class="text-sm font-medium text-gray-600 hover:text-alink-accent transition">Home</a>
+                <a href="#solutions" class="text-sm font-medium text-gray-600 hover:text-alink-accent transition">Solutions</a>
+                <a href="#case" class="text-sm font-medium text-gray-600 hover:text-alink-accent transition">Case Studies</a>
+                <a href="#about" class="text-sm font-medium text-gray-600 hover:text-alink-accent transition">About</a>
+                <a href="https://wa.me/+6281393657195" class="bg-alink-accent text-white px-5 py-2.5 rounded-lg font-semibold shadow hover:bg-blue-600 transition transform hover:scale-105">
+                    Start a Pilot Consultation
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-36 pb-20 px-6">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div class="reveal active">
+                <h1 class="text-5xl lg:text-6xl font-extrabold leading-tight text-alink-dark">
+                    Linking <span class="text-alink-accent">People, Processes</span> & Technology Into One Intelligent System
+                </h1>
+                <p class="mt-6 text-xl text-gray-600 leading-relaxed">
+                    <strong>Operational autonomy for real businesses.</strong> Alink Technology merancang sistem agentic yang mengotomatisasi workflow, sinkronisasi data, dan memberikan kejelasan operasional di lingkungan retail, network, dan presales.
+                </p>
+                <div class="mt-10 flex flex-col sm:flex-row gap-4">
+                    <a href="https://wa.me/+6281393657195" class="bg-alink-accent text-white px-8 py-3 rounded-lg font-semibold shadow-lg hover:bg-blue-600 text-center transition hover:-translate-y-1">
+                        Start a Pilot Consultation
+                    </a>
+                    <a href="#case" class="border-2 border-alink-accent text-alink-accent px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 text-center transition hover:-translate-y-1">
+                        Explore Case Studies
+                    </a>
+                </div>
+            </div>
+
+            <div class="reveal delay-200 flex justify-center">
+                <img src="images/hero-image.png" alt="Alink Technology Workflow Diagram" class="w-full max-w-lg h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-700">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-alink-light">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-alink-dark">Why Alink Technology Matters</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300 reveal group">
+                    <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">⚙️</div>
+                    <h3 class="text-xl font-bold mb-2">Operational Autonomy</h3>
+                    <p class="text-gray-600 text-sm">Sistem yang mengeksekusi tugas tanpa perlu input manual berulang.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300 reveal group">
+                    <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🔗</div>
+                    <h3 class="text-xl font-bold mb-2">Unified Architecture</h3>
+                    <p class="text-gray-600 text-sm">Workflow, trigger, dan data terhubung dalam satu sistem state-driven.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300 reveal group">
+                    <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">👁️</div>
+                    <h3 class="text-xl font-bold mb-2">Real-Time Clarity</h3>
+                    <p class="text-gray-600 text-sm">Visibilitas langsung atas order, tiket, status presales, atau inventory.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300 reveal group">
+                    <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🎯</div>
+                    <h3 class="text-xl font-bold mb-2">Outcome Focused</h3>
+                    <p class="text-gray-600 text-sm">Fokus pada efisiensi waktu dan pengurangan error, bukan sekadar "AI Gimmick".</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="solutions" class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12 reveal">
+                <span class="text-alink-accent font-bold tracking-wider uppercase text-sm">Solutions</span>
+                <h2 class="text-4xl font-bold mt-2 text-alink-dark">Modernizing Workflows</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-alink-accent reveal hover:-translate-y-2 transition duration-300">
+                    <div class="text-4xl mb-6">🤖</div>
+                    <h3 class="text-2xl font-bold mb-4">Business Automation</h3>
+                    <ul class="space-y-3 text-gray-600 text-sm">
+                        <li class="flex items-center"><span class="text-alink-accent mr-2">✓</span> Ticketing & Order Workflows</li>
+                        <li class="flex items-center"><span class="text-alink-accent mr-2">✓</span> State-driven Execution</li>
+                        <li class="flex items-center"><span class="text-alink-accent mr-2">✓</span> Backend Orchestration (n8n)</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-alink-accent reveal hover:-translate-y-2 transition duration-300">
+                    <div class="text-4xl mb-6">💡</div>
+                    <h3 class="text-2xl font-bold mb-4">Presales Intelligence</h3>
+                    <ul class="space-y-3 text-gray-600 text-sm">
+                        <li class="flex items-center"><span class="text-alink-accent mr-2">✓</span> Proposal Automation</li>
+                        <li class="flex items-center"><span class="text-alink-accent mr-2">✓</span> Knowledge Routing</li>
+                        <li class="flex items-center"><span class="text-alink-accent mr-2">✓</span> PoC Documentation System</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-alink-accent reveal hover:-translate-y-2 transition duration-300">
+                    <div class="text-4xl mb-6">📦</div>
+                    <h3 class="text-2xl font-bold mb-4">AIDC & Retail Ops</h3>
+                    <ul class="space-y-3 text-gray-600 text-sm">
+                        <li class="flex items-center"><span class="text-alink-accent mr-2">✓</span> RFID & Barcode Integration</li>
+                        <li class="flex items-center"><span class="text-alink-accent mr-2">✓</span> Inventory State Monitor</li>
+                        <li class="flex items-center"><span class="text-alink-accent mr-2">✓</span> Dispatch Visibility</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="case" class="py-20 bg-alink-light px-6">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-start">
+            <div class="reveal">
+                <span class="text-alink-accent font-bold uppercase text-sm">Flagship Case Study</span>
+                <h2 class="text-3xl font-bold mt-2 mb-6">Autonomous Workflow for Retail Service</h2>
+                <p class="text-gray-700 mb-6 text-lg">
+                    Transformasi layanan tailor konvensional menjadi sistem cerdas dengan pelacakan status real-time, update via AI, dan orkestrasi backend.
+                </p>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 mb-8">
+                    <h4 class="font-bold mb-2">Hasil:</h4>
+                    <ul class="list-disc ml-5 text-gray-600 space-y-1">
+                        <li>Tidak ada lagi order yang hilang.</li>
+                        <li>Beban admin berkurang drastis (otomatisasi update).</li>
+                        <li>Customer mendapat notifikasi status real-time.</li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-wrap items-center gap-4">
+                    <a href="https://sematatailor.alinktech.my.id" class="bg-alink-dark text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-gray-800 transition">
+                        View Demo
+                    </a>
+                    <a href="casestudy.html" class="group flex items-center font-semibold text-alink-accent hover:text-blue-700 transition px-4 py-3">
+                        More Case Studies 
+                        <span class="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="reveal bg-white p-6 rounded-2xl shadow-xl border border-gray-200 hover:shadow-2xl transition-shadow duration-500">
+                <div class="flex justify-between border-b pb-4 mb-4">
+                    <span class="font-bold text-gray-700">Order Dashboard</span>
+                    <span class="text-xs text-gray-400">Live System</span>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex justify-between p-3 bg-gray-50 rounded-lg items-center">
+                        <span class="font-medium text-sm">#10294 - Kemeja Custom</span>
+                        <span class="text-xs bg-green-500 text-white px-2 py-1 rounded-full">Ready</span>
+                    </div>
+                    <div class="flex justify-between p-3 bg-white border rounded-lg items-center">
+                        <span class="font-medium text-sm">#10295 - Celana Panjang</span>
+                        <span class="text-xs bg-yellow-500 text-white px-2 py-1 rounded-full">Proses Jahit</span>
+                    </div>
+                    <div class="flex justify-between p-3 bg-gray-50 rounded-lg items-center">
+                        <span class="font-medium text-sm">#10296 - Jaket Kulit</span>
+                        <span class="text-xs bg-blue-500 text-white px-2 py-1 rounded-full">Menunggu Bahan</span>
+                    </div>
+                    <div class="pt-2 flex justify-center">
+                         <div class="w-12 h-1 bg-gray-200 rounded-full"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-white border-t border-gray-200 py-12 mt-20 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left flex items-center gap-3">
+                <img src="images/alinktech-favicon.png" class="w-8 h-8 opacity-80" alt="Logo Footer">
+                <div>
+                    <h3 class="font-bold text-lg leading-tight">Alink Technology</h3>
+                    <p class="text-gray-500 text-xs">© 2025 Autonomous Workflow Consulting</p>
+                </div>
+            </div>
+            <div class="flex space-x-6">
+                <a href="https://www.linkedin.com/in/alindra-setya-ardana-7a0a78281/" class="text-gray-500 hover:text-alink-accent transition">LinkedIn</a>
+                <a href="mailto:asetyaardana@gmail.com" class="text-gray-500 hover:text-alink-accent transition">Email Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module">
+        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+        createChat({
+            webhookUrl: 'https://n8n.alinktech.my.id/webhook/db82f294-f2a5-47a9-8908-ae48183a588c/chat',
+            
+            mode: 'window', 
+            showWelcomeScreen: true,
+            
+            initialMessages: [
+                'Hai, saya Alink Assistant 👋',
+                'Saya bisa bantu identifikasi workflow yang bisa di-otomasi. Mau mulai dari mana?'
+            ],
+            
+            i18n: {
+                en: {
+                    title: 'Alink Assistant',
+                    subtitle: 'Workflow & Automation Guide',
+                    footer: '',
+                    getStarted: 'Mulai Chat',
+                    inputPlaceholder: 'Ketik pesan...',
+                },
+            },
+        });
+    </script>
+
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal();
+    </script>
+</body>
+</html>
